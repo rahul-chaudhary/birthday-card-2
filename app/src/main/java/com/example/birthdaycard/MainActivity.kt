@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         binding.generateButton.setOnClickListener {
             val name = binding.nameTextField.text.toString()
             val greetingIntent = Intent(this, GreetingActivity::class.java).apply {
-                putExtra("NAME_EXTRA", name)
+                putExtra(GreetingActivity.NAME_EXTRA, name)
                 Log.d("Name log", name)
             }
             startActivity(greetingIntent)
